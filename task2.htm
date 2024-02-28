@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form submission</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="form">
+            <input id="first" type="text" placeholder="First name">
+            <input id="last" type="text" placeholder="Last name">
+            <input id="phone" type="number" placeholder="Phone number">
+            <input id="btn" type="button" value="Submit">
+        </div>
+
+        <div id="table">
+            <table>
+                <tr>
+                    <th>
+                        First Name
+                    </th>
+                    <th>
+                        Last Name
+                    </th>
+                    <th>
+                        Phone Number
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+    <script>
+
+        const first = document.getElementById("first")
+        const last = document.getElementById("last")
+        const number = document.getElementById("phone")
+        const submitButton = document.getElementById("btn")
+        const table = document.getElementById("table")
+
+        submitButton.addEventListener("click", function () {
+
+
+if(first.value&& last.value&& number.value!=null)
+{
+            const tr = document.createElement("tr")
+            let td1 = document.createElement("td")
+            let td2 = document.createElement("td")
+            let td3 = document.createElement("td")
+            let editButton = document.createElement("button");
+            let deleteButton = document.createElement("button");
+          
+            editButton.textContent = "edit"
+            deleteButton.textContent = "Delete"
+
+            td1 = first.value;
+            td2 = last.value;
+            td3 = number.value;
+
+            editButton.onclick = () => {
+                first.value = td1;
+                last.value = td2;
+                number.value = td3;
+                first.focus();
+            }
+            deleteButton.onclick = () => {
+                table.removeChild(tr);
+            }
+
+            tr.append(td1, td2, td3, editButton, deleteButton);
+            table.appendChild(tr)
+}
+
+            first.value = "";
+            last.value = "";
+            number.value = "";
+        });
+
+
+
+
+    </script>
+
+</body>
+
+</html>

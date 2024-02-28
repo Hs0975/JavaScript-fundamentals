@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ForEach methods
+ /*  
+let arr=[2,5,6,7,6]
+arr.forEach((ele,index)=>{
+    console.log(arr,index)  
+})
+
+
+//map method
+
+let updated = arr.map(function(ele,index){
+  return ele*2;
+})
+console.log(updated); */
+
+
+/* 
+let strArr=["a","b","c","d"];
+let r=[];
+for(let i=0;i<strArr.length;i++){
+   r.push( strArr[i].toLocaleUpperCase());
+}
+console.log("Updated array",r); */
+
+/* let strArr =["a","b","c","d"]; 
+let newStr = strArr.map((ele)=>{
+    return ele.toLocaleUpperCase()
+});
+console.log(newStr) */
+//finding the Even number in an array
+/* let arr = [2,5,6,10,16,9]
+let newarr=[];
+
+function evenNum(arr){
+    for(let i=0;i<arr.length;i++){
+    if(arr[i]%2==0){
+        console.log(arr[i])
+    }
+}
+}
+
+
+ -->
+ 
+ let arr=[1,2,4,5,6,7];//finding the even nuber 
+ let newarr=[];
+ arr.filter((ele)=>{
+    if(ele%2==0){
+        newarr.push(ele)
+    }
+    console.log(newarr)
+ })
+
+
+</script>
+</body>
+</html>

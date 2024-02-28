@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /*  const obj1=new Object() // Using constructor
+        obj1.name="Rohan";
+        obj1.age= 25;
+        obj1.city="Varanasi"
+
+        console.log(obj1) */
+// using constructor function
+function Human(Name,age){
+    this.Name=Name;
+    this.age=age;
+
+}
+let obj2 = new Human("Rohan",25)
+console.log(obj2);
+
+// using classes
+
+class Animal{
+    constructor(legs,hands){
+        this.legs=legs;
+        this.hands=hands;
+    }
+}
+
+let elephant = new Animal(4,0)
+console.log(elephant)
+
+    </script>
+</body>
+</html>
